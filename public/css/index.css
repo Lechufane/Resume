@@ -1,0 +1,184 @@
+* {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/*header*/
+
+header {
+    background-color: #48acf0;
+    padding-bottom: 20px;
+    border: none;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 5px 5px 0;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 0 50% 50% 50%;
+}
+
+.presentation {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-around;
+}
+
+.presentation h2 {
+    width: 100%;
+}
+
+
+/*main*/
+
+.main {
+    display: flex;
+    flex-flow: wrap column-reverse;
+}
+
+article {
+    padding: 5px;
+}
+
+#article-1 {
+    padding: 0 0 5px 0;
+}
+
+.list-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.left {
+    background-color: #b5e2fa;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.left article p {
+    padding: 3px 0;
+}
+
+.left i {
+    padding: 0 10px 0 0;
+}
+
+.left ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left ul li {
+    width: auto;
+}
+
+.right h2 {
+    background-color: #48acf0;
+    border-radius: 5px;
+}
+
+.right .form ul li {
+    text-align: left;
+}
+
+.right .form h2 {
+    border-radius: 0 0 5px 5px;
+}
+
+h2 {
+    padding: 5px;
+}
+
+.list-1,
+.eng,
+.jpn,
+.content {
+    animation-name: languages;
+    animation-duration: 2000ms;
+    animation-iteration-count: 1;
+}
+
+h3 {
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes languages {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 565px) {
+    /*header*/
+    header {
+        border-radius: 15px 15px 0 15px;
+    }
+    .header {
+        justify-content: space-between;
+    }
+    h1 {
+        align-self: flex-end;
+    }
+    /*main*/
+    .main {
+        flex-flow: nowrap row;
+    }
+    .left {
+        width: 50%;
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: space-between;
+    }
+    .left ul li {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+    .right article {
+        padding: 5px 0px 5px 5px;
+    }
+    .right h2 {
+        border-radius: 5px 0 0 5px;
+        /* top-left | top-right | bottom-right | bottom-left */
+    }
+    .right .form h2 {
+        border-radius: 0 0 0 5px;
+        /* top-left | top-right | bottom-right | bottom-left */
+    }
+    .contact {
+        text-align: justify;
+    }
+}
