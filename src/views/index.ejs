@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Diego Villafañe</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <div class="profile">
+                <img src="/img/Foto.jpg" alt="profile pic">
+            </div>
+            <div class="presentation">
+                <h1>Diego Villafañe</h1>
+                <h2> <i>“Great results can be achieved with small forces.”</i> Tsun-Zu.</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <section class="left">
+                <article>
+                    <div class="about-me">
+                        <h2>About me.</h2>
+                        <p>-I play bass guitar in 2 bands, traveled with my music, and released 4 albums in total.</p>
+                        <p>-I absolutely love roleplaying games like Dungeons and Dragons, or Pathfinder, or TCG's like Magic the gathering.</p>
+                        <p>-My hobbies are watching movies, and reading comics.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="contact">
+                        <h2>Contact Information.</h2>
+                        <ul>
+                            <li><i class="fas fa-at"></i> diego.villafane94@gmail.com</li>
+                            <li><i class="fab fa-github"></i>github.com/Lechufane</li>
+                            <li><i class="fab fa-linkedin-in"></i>linkedin.com/in/diegovillafañe/</li>
+                            <li><i class="fas fa-mobile-alt"></i>2616138635</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section class="right">
+                <article id="article-1">
+                    <div class="form">
+                        <h2>Formation.</h2>
+                        <div class="list-1">
+                            <ul>
+                                <% for(let i = 0; i < codeSkills.length; i++) {%>
+                                    <li class="content">
+                                        <%= codeSkills[i] %>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="lang">
+                        <h2>Languages</h2>
+                        <% for (let i = 0; i < lang.length; i++) { %>
+                            <h3>
+                                <%= lang[i] %>
+                            </h3>
+                            <div class=<%=lang[i] %>>
+                                <% if(i==0){%>
+                                    <ul class="content">
+                                        <% for (let j = 0; j < eng.length; j++) { %>
+                                            <li>
+                                                <%= eng[j] %>
+                                            </li>
+                                            <% } %>
+                                    </ul>
+                                    <% } else{%>
+                                        <ul class="content">
+                                            <li>
+                                                <%= jpn  %>
+                                            </li>
+                                        </ul>
+                                        <% } %>
+                            </div>
+                            <%}%>
+                    </div>
+                </article>
+                <article>
+                    <div class="exp">
+                        <h2>Experience</h2>
+                        <p class="content">I am currently working in my first job doing an ecommerce for my first client as a free lance job, however I'm eager to work with new co-workers and experience my first job coding, this is my attempt to change te course of my life
+                            and start doing what I like</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
